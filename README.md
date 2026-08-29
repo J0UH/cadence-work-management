@@ -1,16 +1,18 @@
+[← All systems](https://github.com/J0UH) · [Money and operations systems](https://github.com/J0UH/money-operations-systems)
+
 <p align="center">
-  <img src="assets/hero.png" alt="Cadence work management system illustration" width="100%" />
+  <img src="assets/hero.webp" alt="Committed blocks are locked behind an ochre boundary apart from loose future blocks" width="100%" />
 </p>
 
 # Cadence work management
 
 Cadence treats work as a sequence of commitments rather than an endless stream of cards. It is designed for small teams that need a calm shared view of what exists, what moved, and what needs attention.
 
-[Discuss a similar system](mailto:ju@jomena.group?subject=Discuss%20Cadence%20work%20management) | [Book a technical call](mailto:ju@jomena.group?subject=Book%20a%20technical%20call%20about%20Cadence%20work%20management)
-
 ## The engineering problem
 
 Most project tools optimise for adding work. The harder problem is preserving ownership and history while helping a team decide what deserves focus now.
+
+
 
 ## What the system covers
 
@@ -24,17 +26,16 @@ Most project tools optimise for adding work. The harder problem is preserving ow
 
 ```mermaid
 flowchart TD
-    n0["Team intent"]
-    n1["Work ledger"]
-    n2["Realtime state"]
-    n3["Sprint view"]
-    n4["Integrations"]
-    n5["History"]
-    n0 --> n1
-    n1 --> n2
-    n2 --> n3
-    n3 --> n4
-    n4 --> n5
+accTitle: Cadence work management
+accDescr: Work crosses an explicit commitment boundary before entering a sprint. Changes return through the ledger instead of silently rewriting the plan, leaving a durable record of what was promised.
+    intent["Team intent"] --> backlog["Work ledger"]
+    backlog --> commit{"Commit now?"}
+    commit -->|Yes| sprint["Committed sequence"]
+    commit -->|No| uncommitted["Uncommitted work"]
+    sprint --> realtime["Realtime state"]
+    realtime --> changed{"Commitment changed?"}
+    changed -->|Yes| backlog
+    changed -->|No| history["Durable history"]
 ```
 
 ## Build notes
@@ -43,8 +44,8 @@ flowchart TD
 - Keep the history of a commitment after its board position changes.
 - Use quiet defaults so the tool supports focus instead of competing for it.
 
-<sub>Built under the Aryze umbrella. The underlying source and company IP remain private and owned by Aryze. Delivery involved people across engineering, product, operations, compliance, and design. Open-source foundations retain their original attribution and licences.</sub>
+<sub>Personal work. Public overview only. Source code, credentials, and private operating details are not included.</sub>
 
 ## Talk through a similar problem
 
-If you are trying to build, untangle, or ship a system in this area, [send me a note](mailto:ju@jomena.group?subject=I%20need%20help%20with%20Cadence%20work%20management). If the problem needs a deeper technical conversation, [book a call by email](mailto:ju@jomena.group?subject=Book%20a%20technical%20call%20about%20Cadence%20work%20management).
+Working on something similar? [Tell me about it](mailto:ju@jomena.group?subject=Cadence%20work%20management).
