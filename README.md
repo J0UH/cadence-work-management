@@ -23,7 +23,7 @@ Most project tools optimise for adding work. The harder problem is preserving ow
 ## System shape
 
 ```mermaid
-flowchart LR
+flowchart TD
     n0["Team intent"]
     n1["Work ledger"]
     n2["Realtime state"]
