@@ -4,7 +4,7 @@
 
 A personal work-management project for small teams that want a calmer view of their commitments.
 
-<img src="assets/hero-v2.webp" alt="Cadence work management illustrated as a crafted architectural model, with exposed sketch and structural framing" width="100%" />
+<img src="assets/hero-v3.webp" alt="Graphite task blocks pass through an amber commitment gate along a shared rail" width="100%" />
 
 Adding another task is easy. Knowing what the team has actually committed to, who owns it, and why it moved is harder. That is the part of work management I wanted Cadence to pay attention to.
 
