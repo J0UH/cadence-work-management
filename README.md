@@ -1,20 +1,24 @@
-[← All systems](https://github.com/J0UH) · [Money and operations systems](https://github.com/J0UH/money-operations-systems)
-
-<p align="center">
-  <img src="assets/hero.webp" alt="Committed blocks are locked behind an ochre boundary apart from loose future blocks" width="100%" />
-</p>
+[← All work](https://github.com/J0UH) · [Money and operations systems](https://github.com/J0UH/money-operations-systems)
 
 # Cadence work management
 
-Cadence treats work as a sequence of commitments rather than an endless stream of cards. It is designed for small teams that need a calm shared view of what exists, what moved, and what needs attention.
+A personal work-management project for small teams that want a calmer view of their commitments.
 
-## The engineering problem
+<img src="assets/hero-v2.webp" alt="Cadence work management illustrated as a crafted architectural model, with exposed sketch and structural framing" width="100%" />
 
-Most project tools optimise for adding work. The harder problem is preserving ownership and history while helping a team decide what deserves focus now.
+Adding another task is easy. Knowing what the team has actually committed to, who owns it, and why it moved is harder. That is the part of work management I wanted Cadence to pay attention to.
 
+Cadence treats tasks and sprints as a record of decisions over time. The current view matters, but so does the history behind it. Moving a card should not erase what was previously promised.
 
+## Making changes understandable
 
-## What the system covers
+The design uses a small set of meaningful states and a shared view of current work. When a commitment changes, the change belongs in the record so the next person can understand it without piecing together a separate conversation.
+
+Team ownership, invitations, and access are part of that same product problem. People need to know which work is theirs and what they can change. Optional CRM synchronisation connects the work to customer context where it is useful.
+
+I want the tool to support focus. That means quiet defaults, explicit commitments, and enough context to make the next decision without filling the screen with more activity.
+
+## What the work covers
 
 - Task and sprint ledgers
 - Realtime team state
@@ -22,7 +26,8 @@ Most project tools optimise for adding work. The harder problem is preserving ow
 - Change history and ownership
 - Optional CRM synchronisation
 
-## System shape
+<details>
+<summary>A closer look at the technical flow</summary>
 
 ```mermaid
 flowchart TD
@@ -38,14 +43,13 @@ accDescr: Work crosses an explicit commitment boundary before entering a sprint.
     changed -->|No| history["Durable history"]
 ```
 
-## Build notes
+</details>
 
-- Prefer a small set of meaningful states.
-- Keep the history of a commitment after its board position changes.
-- Use quiet defaults so the tool supports focus instead of competing for it.
+## Related work
 
-<sub>Personal work. Public overview only. Source code, credentials, and private operating details are not included.</sub>
+- [Money and operations systems](https://github.com/J0UH/money-operations-systems)
+- [Project intelligence and coordination](https://github.com/J0UH/project-intelligence-coordination)
 
-## Talk through a similar problem
+Working on a similar problem? [Tell me what you are building](mailto:ju@jomena.group?subject=Cadence%20work%20management).
 
-Working on something similar? [Tell me about it](mailto:ju@jomena.group?subject=Cadence%20work%20management).
+*This is a public account of the work. Source code and private operating details are not included in this repository.*
